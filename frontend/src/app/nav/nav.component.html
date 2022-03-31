@@ -1,8 +1,10 @@
 <div class="navigation--container">
     <div>
-        <h3>
-            Poutchi Anime
-        </h3>
+        <a routerLink="">
+            <h3>
+                Poutchi Anime
+            </h3>
+        </a>
     </div>
 
     <ul>
@@ -20,11 +22,15 @@
     </ul>
 
     <ul class="connexion--container">
-        <button class="button">
-            <li [routerLink]="">Se connecter</li>
-        </button>
-        <button class="button">
-            <li [routerLink]="">Inscription</li>
-        </button>
+        <a routerLink="/register">
+            <button class="button">
+                <li>Register</li>
+            </button>
+        </a>
+        <a routerLink="/login">
+            <button class="button">
+                <li>log in </li>
+            </button>
+        </a>
     </ul>
 </div>

@@ -10,7 +10,7 @@ export class NavComponent implements OnInit {
 
 
   public menu: Link[] = [
-    // new Link('Home', '', [], true, undefined)
+    // new Link('Register', '', [], true, undefined)
   ]
   constructor() { }
 

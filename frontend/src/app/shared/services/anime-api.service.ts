@@ -40,7 +40,7 @@ export class AnimeApiService {
   }
 
 
-  private _getAllResultToAnimeListArray(data: IGetOneResult[]): IAnimeDatas[] {
+  public _getAllResultToAnimeListArray(data: IGetOneResult[]): IAnimeDatas[] {
     let result: IAnimeDatas[] = []
     console.log("data", data)
     data.forEach(element => result.push({
@@ -55,6 +55,16 @@ export class AnimeApiService {
     }));
     return result;
   }
+
+  public post(newAnime: IAnimeDatas): Observable<IAnimeDatas> {
+    return this._http.post<IAnimeDatas>(this._url, newAnime);
+  }
+
+  public delete(id: number) {
+    return this._http.delete(this._url + id);
+  }
+
+
 }
 
 

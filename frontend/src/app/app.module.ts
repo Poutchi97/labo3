@@ -11,6 +11,10 @@ import { SharedModule } from 'primeng/api';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { RegisterComponent } from './register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+
 
 
 
@@ -18,7 +22,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
   declarations: [
     AppComponent,
     NavComponent,
-    AccueilComponent
+    AccueilComponent,
+    RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,10 +34,12 @@ import { MatGridListModule } from '@angular/material/grid-list';
     SharedModule,
     HttpClientModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
-  exports: [SharedModule, HttpClientModule],
+  exports: [SharedModule, HttpClientModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

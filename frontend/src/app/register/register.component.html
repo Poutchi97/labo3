@@ -1,0 +1,27 @@
+<div class="form--container">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div>
+            <!-- <label for="name">Name</label> -->
+            <input type="text" name="name" id="name" placeholder="Name" formControlName="name">
+        </div>
+
+        <div>
+            <!-- <label for="name">Firstname</label> -->
+            <input type="text" name="firstname" id="firstname" placeholder="Firstname" formControlName="firstname">
+        </div>
+        <div>
+            <!-- <label for="name">Email</label> -->
+            <input type="email" name="email" id="email" placeholder="email" formControlName="email">
+        </div>
+        <div>
+            <!-- <label for="name">Birthdate</label> -->
+            <input type="date" name="birthdate" id="birthdate" placeholder="Birthdate" formControlName="birthdate">
+        </div>
+        <div>
+            <!-- <label for="name">Password</label> -->
+            <input type="password" name="password" id="password" placeholder="Password" formControlName="password">
+        </div>
+
+        <input type="submit" value="Register" [disabled]="!registerForm.valid">
+    </form>
+</div>
