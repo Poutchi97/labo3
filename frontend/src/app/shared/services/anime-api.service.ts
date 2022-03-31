@@ -32,11 +32,11 @@ export class AnimeApiService {
 
 
   public getAll(): Observable<IAnimeDatas[]> {
-    // let params: HttpParams = new HttpParams()
-    //   .set('offset', 0)
-    //   .set('limit', 6)
-    return this._http.get<IGetOneResult[]>(this._url)
-      .pipe(map(this._getAllResultToAnimeListArray))  // , { params: params }
+    let params: HttpParams = new HttpParams()
+      .set('[offset]', 0)
+      .set('[limit]', 6)
+    return this._http.get<IGetOneResult[]>(this._url, { params: params })
+      .pipe(map(this._getAllResultToAnimeListArray))  // 
   }
 
 

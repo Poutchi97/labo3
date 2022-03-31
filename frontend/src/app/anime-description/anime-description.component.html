@@ -1,0 +1,36 @@
+<div class="description--body">
+    <h1>{{animeDesc.ja_jp}} </h1>
+
+    <div class="description--container">
+        <div *ngIf="animeDesc" class="infos">
+            <div class="title">
+                <h2>{{animeDesc.ja_jp}}</h2>
+                <h4>({{animeDesc.en_jp}})</h4>
+            </div>
+
+            <div class="space--evenly">
+                <p> Episode count : <span>{{animeDesc.episodeCount}} episodes</span></p>
+                <div class="status">
+                    <p>Starting date : {{animeDesc.startDate}}</p>
+                    <p>Ending date : {{animeDesc.endDate}}</p>
+                    <p>Status : {{animeDesc.status}}</p>
+                </div>
+                <div class="description">
+                    <h4>
+                        Description:
+                    </h4>
+                    <p class="description">{{animeDesc.description}}</p>
+                </div>
+                <div class="rating">
+                    <p>Average rating : {{animeDesc.averageRating}}</p>
+                    <p>Rating rank : {{animeDesc.ratingRank}}</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="image">
+            <img [src]="animeDesc.original" alt={{animeDesc.original}} width=470 height="700">
+        </div>
+    </div>
+</div>

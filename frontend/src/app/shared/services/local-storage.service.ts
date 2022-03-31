@@ -7,6 +7,7 @@ import { IUser } from 'src/app/models/iuser';
   providedIn: 'root'
 })
 export class LocalStorageService {
+  public userEmail?: string;
   public idUserLocalstorage!: string;
   public ConnexionBehavior: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(this.userLogged(this.idUserLocalstorage));
   constructor() { }
@@ -16,10 +17,13 @@ export class LocalStorageService {
     this.ConnexionBehavior.next(this.userLogged(key));
   }
 
+  public savedUser(key: string) {
+    this.ConnexionBehavior.next(this.userLogged(key))
+  }
+
   public getUser(key: string) {
     let user: string | null = localStorage.getItem(key);
     if (user === null) throw new Error("No user saved");
-
     return JSON.parse(user);
   }
 

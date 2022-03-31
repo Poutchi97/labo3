@@ -3,6 +3,7 @@
         <label for="anime">Sorted by:</label>
 
         <select name="anime" id="anime">
+            <option value=""></option>
             <option value="rating">Rating</option>
             <option value="rating">Starting date</option>
             <option value="rating">Ending Date</option>
@@ -18,11 +19,11 @@
     </div>
 </div>
 <div class="card--container">
-    <div class="card" *ngFor="let ani of animes">
+    <div class="card" *ngFor="let ani of animes; let i = index">
         <div class="card--header">
             <h2>{{ani.ja_jp}}</h2>
             <h4>{{ani.en_jp}}</h4>
-            <img mat-card-xl-image [src]="ani.originalImage" [alt]="ani.en_jp">
+            <img [src]="ani.originalImage" [alt]="ani.en_jp">
         </div>
 
 
@@ -33,7 +34,7 @@
             </p>
 
             <div class="button--container">
-                <button class="button" (click)="displayDescription()">Show description</button>
+                <button class="button" (click)="displayDetails(i)">Show details</button>
             </div>
             <h5>
                 rating : {{ani.averageRating}}

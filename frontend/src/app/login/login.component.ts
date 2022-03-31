@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { LocalStorageService } from '../shared/services/local-storage.service';
 
 @Component({
@@ -11,7 +12,9 @@ export class LoginComponent implements OnInit {
   public loginForm!: FormGroup;
   constructor(
     private _fb: FormBuilder,
-    private _localStorage: LocalStorageService) { }
+    private _localStorage: LocalStorageService,
+    private _router: Router
+  ) { }
 
   ngOnInit(): void {
 
@@ -27,10 +30,8 @@ export class LoginComponent implements OnInit {
     if (user) {
       if (this._localStorage.getUser(this.loginForm.value.email).password === this.loginForm.value.password) {
         console.dir("yes")
+        this._router.navigateByUrl('/');
       }
     }
   }
-
-
-
 }

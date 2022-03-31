@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { PrimeNGConfig } from 'primeng/api';
 import { IAnimeDatas } from '../models/ianime-datas';
 import { AnimeApiService } from '../shared/services/anime-api.service';
@@ -9,12 +10,14 @@ import { AnimeApiService } from '../shared/services/anime-api.service';
   styleUrls: ['./accueil.component.scss']
 })
 export class AccueilComponent implements OnInit {
+  public animeDescription!: number;
   public isVisible!: any;
   public animes: IAnimeDatas[] = []
   public anime!: IAnimeDatas;
   constructor(
     private _primengConfig: PrimeNGConfig,
-    private _api: AnimeApiService
+    private _api: AnimeApiService,
+    private _router: Router
   ) {
   }
 
@@ -31,15 +34,16 @@ export class AccueilComponent implements OnInit {
 
     this._api.getAll().subscribe(
       {
-        next: (datas) => { this.animes = datas, console.log(datas), console.log(this.animes) }
+        next: (datas) => { this.animes = datas }
       }
     )
   }
 
-  public displayDescription() {
-    let btn: any = document.querySelector('.button')
-    console.log(btn)
-    btn.classname = "isVisible"
+  public displayDetails(id: number) {
+
+    this._router.navigateByUrl('/anime/' + (id + 1))
+    console.log(id);
+
 
   }
 

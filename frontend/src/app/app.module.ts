@@ -14,6 +14,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { AnimeDescriptionComponent } from './anime-description/anime-description.component';
 
 
 
@@ -25,6 +26,7 @@ import { LoginComponent } from './login/login.component';
     AccueilComponent,
     RegisterComponent,
     LoginComponent,
+    AnimeDescriptionComponent,
   ],
   imports: [
     BrowserModule,
