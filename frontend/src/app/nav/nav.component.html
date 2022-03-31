@@ -1,0 +1,30 @@
+<div class="navigation--container">
+    <div>
+        <h3>
+            Poutchi Anime
+        </h3>
+    </div>
+
+    <ul>
+        <li *ngFor="let menuItem of menu">
+            <a [routerLink]="menuItem.url" [queryParams]="menuItem.queryParams">{{menuItem.title}}</a>
+            <ul *ngIf="menuItem.children && menuItem.children.length > 0">
+                <ng-container *ngFor="let subMenuItem of menuItem.children">
+                    <li>
+                        <a [routerLink]="((menuItem.url)?menuItem.url:'')+subMenuItem.url"
+                            [queryParams]="subMenuItem.queryParams">{{subMenuItem.title}}</a>
+                    </li>
+                </ng-container>
+            </ul>
+        </li>
+    </ul>
+
+    <ul class="connexion--container">
+        <button class="button">
+            <li [routerLink]="">Se connecter</li>
+        </button>
+        <button class="button">
+            <li [routerLink]="">Inscription</li>
+        </button>
+    </ul>
+</div>

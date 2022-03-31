@@ -1,0 +1,43 @@
+<div class="search--container">
+    <div class="sortedlist">
+        <label for="anime">Sorted by:</label>
+
+        <select name="anime" id="anime">
+            <option value="rating">Rating</option>
+            <option value="rating">Starting date</option>
+            <option value="rating">Ending Date</option>
+            <option value="rating">User count</option>
+        </select>
+    </div>
+
+    <div>
+        <form>
+            <input type="text" name="" id="">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</div>
+<div class="card--container">
+    <div class="card" *ngFor="let ani of animes">
+        <div class="card--header">
+            <h2>{{ani.ja_jp}}</h2>
+            <h4>{{ani.en_jp}}</h4>
+            <img mat-card-xl-image [src]="ani.originalImage" [alt]="ani.en_jp">
+        </div>
+
+
+        <div class="card--content">
+            <h4>{{ani.createdAt}}</h4>
+            <p class="synopsis">
+                {{ani.synopsis}}
+            </p>
+
+            <div class="button--container">
+                <button class="button" [ngClass]="isVisible" (click)="displayDescription()">Show description</button>
+            </div>
+            <h5>
+                rating : {{ani.averageRating}}
+            </h5>
+        </div>
+    </div>
+</div>

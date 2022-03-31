@@ -1,0 +1,40 @@
+.navigation--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0 20px;
+  background-color: #5a5a7a;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.connexion--container {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+.button {
+  border-radius: 3px;
+  border: none;
+  margin: 0 5px;
+  height: 40px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #d4d4eb;
+}
