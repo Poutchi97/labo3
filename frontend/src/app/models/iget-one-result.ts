@@ -5,12 +5,14 @@ export interface IGetOneResult {
 
 
 interface IAttributes {
-    createdAt?: string;
-    updatedAt?: string;
+    startDate: string;
+    endDate?: string;
     synopsis: string;
     titles: ITitle;
     averageRating?: string;
     posterImage: IPosterImage;
+    userCount: string;
+    status: string;
 }
 
 

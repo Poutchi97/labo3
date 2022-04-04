@@ -45,11 +45,34 @@ export class AccueilComponent implements OnInit {
         }
       }
     )
-
     // get the current queryparams in url
     this._activatedRoute.queryParams
       .subscribe(params => {
-        this.sortStatus = params;
+        console.log(this.animesCopy);
+
+        switch (params['sb']) {
+          case 'rating':
+            this.animesCopy = this._sorting.sortingByRating(this.animes);
+            break;
+
+          case 'startingDate':
+            this.animesCopy = this._sorting.sortingByStartingDate(this.animes);
+            break;
+
+          case 'endingDate':
+            this.animesCopy = this._sorting.sortingByEndingDate(this.animes);
+            break;
+
+          case 'userCount':
+            this.animesCopy = this._sorting.sortingByUserCount(this.animes);
+            console.log(this.animesCopy);
+
+            break;
+
+          default:
+            this.animesCopy = this.animes
+            break;
+        }
       })
 
   }
@@ -61,15 +84,12 @@ export class AccueilComponent implements OnInit {
 
   }
 
-  public searchBy(event: any) {
+  public setParamSorting(event: any) {
     if (event.target.value == "") {
-      this.animesCopy = this.animes
       this._router.navigateByUrl("/");
     }
     else {
-      this.animesCopy = this._sorting.sortingBy(this.animes);
       this._router.navigate(['/'], { queryParams: { sb: event.target.value } })
-      // console.dir(this._sorting.sortingByRating(this.animes))
     }
   }
 

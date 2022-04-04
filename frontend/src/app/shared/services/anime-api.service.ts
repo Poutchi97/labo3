@@ -24,8 +24,11 @@ export class AnimeApiService {
       en_jp: data.attributes.titles.en_jp,
       ja_jp: data.attributes.titles.ja_jp,
       originalImage: data.attributes.posterImage.original ?? "",
-      createdAt: data.attributes.createdAt ?? "",
-      updatedAt: data.attributes.updatedAt ?? ""
+      startDate: data.attributes.startDate,
+      endDate: data.attributes.endDate ?? "",
+      userCount: data.attributes.userCount,
+      status: data.attributes.status
+
     };
     return result
   }
@@ -49,9 +52,11 @@ export class AnimeApiService {
       en_jp: element.attributes.titles.en_jp,
       ja_jp: element.attributes.titles.ja_jp,
       originalImage: element.attributes.posterImage.original ?? "",
-      createdAt: element.attributes.createdAt ?? "",
-      updatedAt: element.attributes.updatedAt ?? "",
-      averageRating: element.attributes.averageRating
+      startDate: element.attributes.startDate,
+      endDate: element.attributes.endDate ?? "",
+      averageRating: element.attributes.averageRating,
+      userCount: element.attributes.userCount,
+      status: element.attributes.status
     }));
     return result;
   }

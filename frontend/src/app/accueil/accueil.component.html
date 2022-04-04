@@ -2,7 +2,7 @@
     <div class="sortedlist">
         <label for="anime">Sorted by:</label>
 
-        <select name="anime" id="anime" (change)="searchBy($event)">
+        <select name="anime" id="anime" (change)="setParamSorting($event)">
             <option value="">Nothing</option>
             <option value="rating">Rating</option>
             <option value="startingDate">Starting date</option>
@@ -28,7 +28,7 @@
 
 
         <div class="card--content">
-            <h4>{{ani.createdAt}}</h4>
+            <h4>Starting date : {{ani.startDate}}</h4>
             <p class="synopsis">
                 {{ani.synopsis}}
             </p>
