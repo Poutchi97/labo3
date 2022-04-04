@@ -1,8 +1,8 @@
-<div class="description--body">
+<div *ngIf="animeDesc" class="description--body">
     <h1>{{animeDesc.ja_jp}} </h1>
 
     <div class="description--container">
-        <div *ngIf="animeDesc" class="infos">
+        <div class="infos">
             <div class="title">
                 <h2>{{animeDesc.ja_jp}}</h2>
                 <h4>({{animeDesc.en_jp}})</h4>

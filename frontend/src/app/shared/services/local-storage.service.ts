@@ -7,7 +7,7 @@ import { IUser } from 'src/app/models/iuser';
   providedIn: 'root'
 })
 export class LocalStorageService {
-  public userEmail?: string;
+  public user!: string;
   public idUserLocalstorage!: string;
   public ConnexionBehavior: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(this.userLogged(this.idUserLocalstorage));
   constructor() { }
@@ -35,7 +35,6 @@ export class LocalStorageService {
     let user: string | null = localStorage.getItem(key);
     if (user === null) {
       return false;
-
     }
     return true;
   }

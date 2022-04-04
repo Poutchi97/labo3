@@ -1,0 +1,24 @@
+<div class="card--container">
+    <div class="card" *ngFor="let ani of animes; let i = index">
+        <div class="card--header">
+            <h2>{{ani.ja_jp}}</h2>
+            <h4>{{ani.en_jp}}</h4>
+            <img [src]="ani.originalImage" [alt]="ani.en_jp">
+        </div>
+
+
+        <div class="card--content">
+            <h4>{{ani.createdAt}}</h4>
+            <p class="synopsis">
+                {{ani.synopsis}}
+            </p>
+
+            <div class="button--container">
+                <button class="button" (click)="displayDetails(i)">Show details</button>
+            </div>
+            <h5>
+                rating : {{ani.averageRating}}
+            </h5>
+        </div>
+    </div>
+</div>

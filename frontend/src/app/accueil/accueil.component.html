@@ -2,12 +2,12 @@
     <div class="sortedlist">
         <label for="anime">Sorted by:</label>
 
-        <select name="anime" id="anime">
-            <option value=""></option>
+        <select name="anime" id="anime" (change)="searchBy($event)">
+            <option value="">Nothing</option>
             <option value="rating">Rating</option>
-            <option value="rating">Starting date</option>
-            <option value="rating">Ending Date</option>
-            <option value="rating">User count</option>
+            <option value="startingDate">Starting date</option>
+            <option value="endingDate">Ending Date</option>
+            <option value="userCount">User count</option>
         </select>
     </div>
 
@@ -19,7 +19,7 @@
     </div>
 </div>
 <div class="card--container">
-    <div class="card" *ngFor="let ani of animes; let i = index">
+    <div class="card" *ngFor="let ani of animesCopy; let i = index">
         <div class="card--header">
             <h2>{{ani.ja_jp}}</h2>
             <h4>{{ani.en_jp}}</h4>
@@ -34,7 +34,7 @@
             </p>
 
             <div class="button--container">
-                <button class="button" (click)="displayDetails(i)">Show details</button>
+                <button class="button" [id]="i + 1" (click)="displayDetails(i)">Show details</button>
             </div>
             <h5>
                 rating : {{ani.averageRating}}

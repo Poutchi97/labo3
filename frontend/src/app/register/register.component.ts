@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { IUser } from '../models/iuser';
 import { LocalStorageService } from '../shared/services/local-storage.service';
 
@@ -13,7 +14,8 @@ export class RegisterComponent implements OnInit {
   public registerForm!: FormGroup
   constructor(
     private _fb: FormBuilder,
-    private _localStorage: LocalStorageService
+    private _localStorage: LocalStorageService,
+    private _router: Router
   ) { }
 
   ngOnInit(): void {
@@ -37,8 +39,8 @@ export class RegisterComponent implements OnInit {
     }
     // this._localStorage.createUser(newUser, (this._localStorage.getUserCount() + 1).toString());
     this._localStorage.createUser(newUser, this.registerForm.value.email);
-
-    console.log("Register OK : ", this._localStorage.getUser("1"))
+    this._router.navigateByUrl("/");
+    this._localStorage.userLogged(this.registerForm.value.email);
   }
 
 }

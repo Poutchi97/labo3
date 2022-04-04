@@ -25,11 +25,11 @@ export class LoginComponent implements OnInit {
   }
 
   public onSubmit() {
-    let user = this._localStorage.userLogged(this.loginForm.value.email)
+    if (this._localStorage.getUser(this.loginForm.value.email).password === this.loginForm.value.password) {
+      if (this._localStorage.getUser(this.loginForm.value.email).email === this.loginForm.value.email) {
 
-    if (user) {
-      if (this._localStorage.getUser(this.loginForm.value.email).password === this.loginForm.value.password) {
         console.dir("yes")
+        this._localStorage.user = this.loginForm.value.email
         this._router.navigateByUrl('/');
       }
     }
