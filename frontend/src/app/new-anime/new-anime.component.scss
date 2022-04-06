@@ -1,0 +1,45 @@
+h1 {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.form--container {
+}
+
+form {
+  width: 500px;
+  padding: 50px;
+  border-radius: 10px;
+
+  background-color: #49546faf;
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(12px);
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    input,
+    textarea {
+      height: 35px;
+      border: none;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      margin-top: 5px;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 15px;
+    color: rgb(35, 255, 182);
+  }
+}
+
+.newanime--container {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,13 +1,14 @@
 export interface IAnimeDatas {
     id: string;
     startDate: string;
-    endDate: string;
+    endDate?: string;
     synopsis: string;
     en_jp: string;
-    ja_jp: string;
+    ja_jp?: string;
     averageRating?: string;
     originalImage: string;
-    userCount: string;
+    userCount?: number;
     status: string;
+    episodeCount: number;
 }
 

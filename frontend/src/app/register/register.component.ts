@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { IUser } from '../models/iuser';
 import { LocalStorageService } from '../shared/services/local-storage.service';
+import { UsersService } from '../shared/services/users.service';
 
 @Component({
   selector: 'app-register',
@@ -12,10 +13,12 @@ import { LocalStorageService } from '../shared/services/local-storage.service';
 export class RegisterComponent implements OnInit {
 
   public registerForm!: FormGroup
+  public usersLength!: number;
   constructor(
     private _fb: FormBuilder,
     private _localStorage: LocalStorageService,
-    private _router: Router
+    private _router: Router,
+    private _register: UsersService
   ) { }
 
   ngOnInit(): void {
@@ -27,20 +30,37 @@ export class RegisterComponent implements OnInit {
       password: [null, [Validators.required]],
     })
 
+    this._register.getAll().subscribe({
+      next: (datas) => {
+        // console.log("getall", datas);
+        this.usersLength = datas.length;
+
+      }
+    })
+
+    this._register.get(1).subscribe({
+      next: (data) => {
+        // console.log("getone", data);
+      }
+    })
+
   }
 
   public onSubmit() {
     let newUser: IUser = {
+      id: this.usersLength += 1,
       name: this.registerForm.value.name.trim(),
       firstname: this.registerForm.value.firstname.trim(),
       email: this.registerForm.value.email,
       birthdate: this.registerForm.value.birthdate,
       password: this.registerForm.value.password
     }
-    // this._localStorage.createUser(newUser, (this._localStorage.getUserCount() + 1).toString());
-    this._localStorage.createUser(newUser, this.registerForm.value.email);
-    this._router.navigateByUrl("/");
-    this._localStorage.userLogged(this.registerForm.value.email);
+
+    this._register.post(newUser).subscribe({
+      next: data => console.log(data)
+    });
+
+    this._localStorage.addUser(newUser) //, this.registerForm.value.email
   }
 
 }

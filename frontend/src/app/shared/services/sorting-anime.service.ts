@@ -31,14 +31,14 @@ export class SortingAnimeService {
   public sortingByUserCount(animeTab: IAnimeDatas[]) {
     let temp: number[] = [];
     animeTab.forEach(element => {
-      temp.push(parseInt(element.userCount) ?? "");
+      temp.push(element.userCount ?? 0);
     });
     temp.sort((a, b) => b - a);
 
     this.newAnimeTab = [];
     for (let i = 0; i < temp.length; i++) {
       for (let j = 0; j < animeTab.length; j++) {
-        if (parseInt(animeTab[j].userCount) === temp[i]) {
+        if (animeTab[j].userCount === temp[i]) {
           this.newAnimeTab.push(animeTab[j])
         }
       }

@@ -11,8 +11,9 @@ interface IAttributes {
     titles: ITitle;
     averageRating?: string;
     posterImage: IPosterImage;
-    userCount: string;
+    userCount?: number;
     status: string;
+    episodeCount: number;
 }
 
 
@@ -26,6 +27,6 @@ interface IPosterImage {
 
 interface ITitle {
     en_jp: string;
-    ja_jp: string;
+    ja_jp?: string;
 }
 

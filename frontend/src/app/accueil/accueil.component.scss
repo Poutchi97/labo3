@@ -1,3 +1,10 @@
+.bigtitle {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  align-items: center;
+}
+
 .button {
   border-radius: 3px;
   border: none;
@@ -41,26 +48,28 @@ form {
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .card {
   color: #ffffff;
   margin: 10px 20px;
   width: 400px;
   height: auto;
   transition: ease 0.8s;
-  background-color: #9393d1;
+  background-color: #3a3845;
   border-radius: 5px;
-  padding: 10px;
+  // padding: 10px;
 }
 .card--header {
-  background-color: #363b4d;
-  padding-top: 25px;
+  // background-color: #363b4d;
+  // padding-top: 25px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 
   h2 {
-    margin: 0 16px 0 0;
+    margin: 16px 16px 0 0;
   }
 }
 
@@ -72,7 +81,8 @@ form {
 }
 
 .card img {
-  border-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
   width: 100%;
   height: 350px;
   object-fit: cover;

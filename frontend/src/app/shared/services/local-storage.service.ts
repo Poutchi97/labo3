@@ -8,17 +8,18 @@ import { IUser } from 'src/app/models/iuser';
 })
 export class LocalStorageService {
   public user!: string;
-  public idUserLocalstorage!: string;
-  public ConnexionBehavior: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(this.userLogged(this.idUserLocalstorage));
+  public key: string = "1";
+  public ConnexionBehavior: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(this.userLogged());
   constructor() { }
 
-  public createUser(user: IUser, key: string) {
-    localStorage.setItem(key, JSON.stringify(user));
-    this.ConnexionBehavior.next(this.userLogged(key));
+  public addUser(user: IUser) {
+    localStorage.setItem(this.key, JSON.stringify(user));
+    this.ConnexionBehavior.next(this.userLogged());
   }
 
-  public savedUser(key: string) {
-    this.ConnexionBehavior.next(this.userLogged(key))
+  public deleteUser(key: string) {
+    localStorage.removeItem(key);
+    this.ConnexionBehavior.next(this.userLogged());
   }
 
   public getUser(key: string) {
@@ -31,8 +32,8 @@ export class LocalStorageService {
     return localStorage.length;
   }
 
-  public userLogged(key: string) {
-    let user: string | null = localStorage.getItem(key);
+  public userLogged() {
+    let user: string | null = localStorage.getItem(this.key);
     if (user === null) {
       return false;
     }

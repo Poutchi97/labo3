@@ -15,6 +15,7 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { AnimeDescriptionComponent } from './anime-description/anime-description.component';
+import { NewAnimeComponent } from './new-anime/new-anime.component';
 
 
 
@@ -27,6 +28,7 @@ import { AnimeDescriptionComponent } from './anime-description/anime-description
     RegisterComponent,
     LoginComponent,
     AnimeDescriptionComponent,
+    NewAnimeComponent,
   ],
   imports: [
     BrowserModule,

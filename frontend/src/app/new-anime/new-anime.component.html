@@ -1,0 +1,41 @@
+<h1>Add new anime to the collection</h1>
+<div class="newanime--container">
+    <div class="form--container">
+        <form [formGroup]="creationForm" (ngSubmit)="onSubmit()">
+            <h2>アニメを追加</h2>
+            <div>
+                <label for="title">Title : </label>
+                <input type="text" formControlName="en_jp">
+            </div>
+            <div>
+                <label for="description">Description : </label>
+                <textarea name="description" id="description" cols="30" rows="2"
+                    formControlName="description"></textarea>
+            </div>
+            <div>
+                <label for="startDate">Starting date : </label>
+                <input type="date" formControlName="startDate">
+            </div>
+            <div>
+                <label for="episodeCount">Number of episode(s) : </label>
+                <input type="number" formControlName="episodeCount">
+            </div>
+            <div>
+                <label for="status">Status</label>
+                <input type="text" formControlName="status">
+            </div>
+            <div>
+                <label for="coverImage">Cover image : </label>
+                <input type="file" formControlName="file" (change)="onFileChange($event)">
+
+            </div>
+
+            <input type="submit" value="Send">
+
+        </form>
+    </div>
+
+    <div>
+        <img src="../assets/image/luffy.png" alt="luffy" width="500px">
+    </div>
+</div>

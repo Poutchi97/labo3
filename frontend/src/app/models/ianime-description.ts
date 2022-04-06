@@ -4,7 +4,7 @@ export interface IAnimeDescription {
 }
 
 interface IAttribute {
-    description: string;
+    synopsis: string;
     titles: ITitles;
     averageRating: string;
     startDate: string;

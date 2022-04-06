@@ -1,4 +1,10 @@
+<div class="bigtitle">
+    <img src="../assets/image/PoutchiAnime.png" alt="PoutchiAnime" width="500px">
+
+</div>
 <div class="search--container">
+
+
     <div class="sortedlist">
         <label for="anime">Sorted by:</label>
 
@@ -20,14 +26,14 @@
 </div>
 <div class="card--container">
     <div class="card" *ngFor="let ani of animesCopy; let i = index">
-        <div class="card--header">
+        <div class="card--header" (click)="displayDetails(i)">
+            <img [src]="ani.originalImage" [alt]="ani.en_jp">
             <h2>{{ani.ja_jp}}</h2>
             <h4>{{ani.en_jp}}</h4>
-            <img [src]="ani.originalImage" [alt]="ani.en_jp">
         </div>
 
 
-        <div class="card--content">
+        <!-- <div class="card--content">
             <h4>Starting date : {{ani.startDate}}</h4>
             <p class="synopsis">
                 {{ani.synopsis}}
@@ -36,9 +42,9 @@
             <div class="button--container">
                 <button class="button" [id]="i + 1" (click)="displayDetails(i)">Show details</button>
             </div>
-            <h5>
+            <h5 *ngIf="ani.averageRating">
                 rating : {{ani.averageRating}}
             </h5>
-        </div>
+        </div> -->
     </div>
 </div>

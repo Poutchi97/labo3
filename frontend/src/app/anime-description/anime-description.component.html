@@ -1,11 +1,12 @@
 <div *ngIf="animeDesc" class="description--body">
     <h1>{{animeDesc.ja_jp}} </h1>
+    <button routerLink="/">Retour</button>
 
     <div class="description--container">
         <div class="infos">
             <div class="title">
-                <h2>{{animeDesc.ja_jp}}</h2>
-                <h4>({{animeDesc.en_jp}})</h4>
+                <h2 *ngIf="animeDesc.ja_jp">{{animeDesc.ja_jp}}</h2>
+                <h4 *ngIf="animeDesc.en_jp">({{animeDesc.en_jp}})</h4>
             </div>
 
             <div class="space--evenly">
@@ -19,11 +20,11 @@
                     <h4>
                         Description:
                     </h4>
-                    <p class="description">{{animeDesc.description}}</p>
+                    <p class="description">{{animeDesc.synopsis}}</p>
                 </div>
                 <div class="rating">
-                    <p>Average rating : {{animeDesc.averageRating}}</p>
-                    <p>Rating rank : {{animeDesc.ratingRank}}</p>
+                    <p *ngIf="animeDesc.averageRating">Average rating : {{animeDesc.averageRating}}</p>
+                    <p *ngIf="animeDesc.ratingRank">Rating rank : {{animeDesc.ratingRank}}</p>
                 </div>
             </div>
         </div>

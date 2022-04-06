@@ -14,13 +14,13 @@ export class UserLoginGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-    let userGuard: string
+    let userGuard: IUser
     try {
-      userGuard = this._localStorage.getUser(this._localStorage.user)
+      userGuard = this._localStorage.getUser("1")
     } catch (error) {
       return true
     }
-    console.warn({ guardPath: this._activatedRoute.snapshot.url, reason: userGuard + "Already connected" })
+    console.warn({ guardPath: this._activatedRoute.snapshot.url, reason: userGuard.email + "Already connected" })
     this._router.navigateByUrl('/')
     return false;
   }

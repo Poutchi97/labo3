@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Link } from '../models/link';
+import { LocalStorageService } from '../shared/services/local-storage.service';
 
 @Component({
   selector: 'app-nav',
@@ -8,14 +9,23 @@ import { Link } from '../models/link';
 })
 export class NavComponent implements OnInit {
 
+  public isLogged!: boolean;
 
   public menu: Link[] = [
-    // new Link('Register', '', [], true, undefined)
+    new Link('New', '/new'),
   ]
-  constructor() { }
+  constructor(
+    private _localstorage: LocalStorageService
+  ) { }
 
   ngOnInit() {
-
+    this._localstorage.ConnexionBehavior.subscribe({
+      next: logged => this.isLogged = logged
+    });
   }
 
+
+  public signOut() {
+    this._localstorage.deleteUser(this._localstorage.key);
+  }
 }

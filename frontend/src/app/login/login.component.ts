@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { IUser } from '../models/iuser';
 import { LocalStorageService } from '../shared/services/local-storage.service';
+import { UsersService } from '../shared/services/users.service';
 
 @Component({
   selector: 'login',
@@ -13,7 +15,9 @@ export class LoginComponent implements OnInit {
   constructor(
     private _fb: FormBuilder,
     private _localStorage: LocalStorageService,
-    private _router: Router
+    private _router: Router,
+    private _users: UsersService
+
   ) { }
 
   ngOnInit(): void {
@@ -25,13 +29,13 @@ export class LoginComponent implements OnInit {
   }
 
   public onSubmit() {
-    if (this._localStorage.getUser(this.loginForm.value.email).password === this.loginForm.value.password) {
-      if (this._localStorage.getUser(this.loginForm.value.email).email === this.loginForm.value.email) {
-
-        console.dir("yes")
-        this._localStorage.user = this.loginForm.value.email
-        this._router.navigateByUrl('/');
-      }
-    }
+    this._users.getAll().subscribe({
+      next: datas => datas.forEach(user => {
+        if (user.email === this.loginForm.value.email && user.password === this.loginForm.value.password) {
+          this._router.navigateByUrl("/");
+          this._localStorage.addUser(user);//, this.loginForm.value.email
+        }
+      })
+    })
   }
 }

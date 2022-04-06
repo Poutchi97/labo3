@@ -3,7 +3,9 @@
     {
       "id": "1",
       "type": "anime",
-      "links": { "self": "https://kitsu.io/api/edge/anime/1" },
+      "links": {
+        "self": "https://kitsu.io/api/edge/anime/1"
+      },
       "attributes": {
         "createdAt": "2013-02-20T16:00:13.609Z",
         "updatedAt": "2022-03-28T07:49:40.312Z",
@@ -17,7 +19,9 @@
           "ja_jp": "カウボーイビバップ"
         },
         "canonicalTitle": "Cowboy Bebop",
-        "abbreviatedTitles": ["COWBOY BEBOP"],
+        "abbreviatedTitles": [
+          "COWBOY BEBOP"
+        ],
         "averageRating": "82.1",
         "ratingFrequencies": {
           "2": "4323",
@@ -60,10 +64,22 @@
           "original": "https://media.kitsu.io/anime/poster_images/1/original.jpg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 110, "height": 156 },
-              "large": { "width": 550, "height": 780 },
-              "small": { "width": 284, "height": 402 },
-              "medium": { "width": 390, "height": 554 }
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
             }
           }
         },
@@ -74,9 +90,18 @@
           "original": "https://media.kitsu.io/anime/1/cover_image/fb57e5f25616633a41f0f5f1ded938ee.jpeg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 840, "height": 200 },
-              "large": { "width": 3360, "height": 800 },
-              "small": { "width": 1680, "height": 400 }
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
             }
           }
         },
@@ -189,7 +214,9 @@
     {
       "id": "2",
       "type": "anime",
-      "links": { "self": "https://kitsu.io/api/edge/anime/2" },
+      "links": {
+        "self": "https://kitsu.io/api/edge/anime/2"
+      },
       "attributes": {
         "createdAt": "2013-02-20T16:00:16.085Z",
         "updatedAt": "2022-03-28T06:00:04.149Z",
@@ -247,10 +274,22 @@
           "original": "https://media.kitsu.io/anime/poster_images/2/original.jpg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 110, "height": 156 },
-              "large": { "width": 550, "height": 780 },
-              "small": { "width": 284, "height": 402 },
-              "medium": { "width": 390, "height": 554 }
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
             }
           }
         },
@@ -261,9 +300,18 @@
           "original": "https://media.kitsu.io/anime/cover_images/2/original.png",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 840, "height": 200 },
-              "large": { "width": 3360, "height": 800 },
-              "small": { "width": 1680, "height": 400 }
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
             }
           }
         },
@@ -376,7 +424,9 @@
     {
       "id": "3",
       "type": "anime",
-      "links": { "self": "https://kitsu.io/api/edge/anime/3" },
+      "links": {
+        "self": "https://kitsu.io/api/edge/anime/3"
+      },
       "attributes": {
         "createdAt": "2013-02-20T16:00:17.112Z",
         "updatedAt": "2022-03-28T06:00:04.149Z",
@@ -384,7 +434,11 @@
         "synopsis": "Vash the Stampede is the man with a $$60,000,000 bounty on his head. The reason: he's a merciless villain who lays waste to all those that oppose him and flattens entire cities for fun, garnering him the title \"The Humanoid Typhoon.\" He leaves a trail of death and destruction wherever he goes, and anyone can count themselves dead if they so much as make eye contact—or so the rumors say. In actuality, Vash is a huge softie who claims to have never taken a life and avoids violence at all costs.\nWith his crazy doughnut obsession and buffoonish attitude in tow, Vash traverses the wasteland of the planet Gunsmoke, all the while followed by two insurance agents, Meryl Stryfe and Milly Thompson, who attempt to minimize his impact on the public. But soon, their misadventures evolve into life-or-death situations as a group of legendary assassins are summoned to bring about suffering to the trio. Vash's agonizing past will be unraveled and his morality and principles pushed to the breaking point.\n[Written by MAL Rewrite]",
         "description": "Vash the Stampede is the man with a $$60,000,000 bounty on his head. The reason: he's a merciless villain who lays waste to all those that oppose him and flattens entire cities for fun, garnering him the title \"The Humanoid Typhoon.\" He leaves a trail of death and destruction wherever he goes, and anyone can count themselves dead if they so much as make eye contact—or so the rumors say. In actuality, Vash is a huge softie who claims to have never taken a life and avoids violence at all costs.\nWith his crazy doughnut obsession and buffoonish attitude in tow, Vash traverses the wasteland of the planet Gunsmoke, all the while followed by two insurance agents, Meryl Stryfe and Milly Thompson, who attempt to minimize his impact on the public. But soon, their misadventures evolve into life-or-death situations as a group of legendary assassins are summoned to bring about suffering to the trio. Vash's agonizing past will be unraveled and his morality and principles pushed to the breaking point.\n[Written by MAL Rewrite]",
         "coverImageTopOffset": 100,
-        "titles": { "en": "Trigun", "en_jp": "Trigun", "ja_jp": "トライガン" },
+        "titles": {
+          "en": "Trigun",
+          "en_jp": "Trigun",
+          "ja_jp": "トライガン"
+        },
         "canonicalTitle": "Trigun",
         "abbreviatedTitles": [],
         "averageRating": "81.79",
@@ -429,10 +483,22 @@
           "original": "https://media.kitsu.io/anime/poster_images/3/original.jpg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 110, "height": 156 },
-              "large": { "width": 550, "height": 780 },
-              "small": { "width": 284, "height": 402 },
-              "medium": { "width": 390, "height": 554 }
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
             }
           }
         },
@@ -443,9 +509,18 @@
           "original": "https://media.kitsu.io/anime/cover_images/3/original.jpg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 840, "height": 200 },
-              "large": { "width": 3360, "height": 800 },
-              "small": { "width": 1680, "height": 400 }
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
             }
           }
         },
@@ -558,7 +633,9 @@
     {
       "id": "4",
       "type": "anime",
-      "links": { "self": "https://kitsu.io/api/edge/anime/4" },
+      "links": {
+        "self": "https://kitsu.io/api/edge/anime/4"
+      },
       "attributes": {
         "createdAt": "2013-02-20T16:00:18.116Z",
         "updatedAt": "2022-03-28T06:00:04.149Z",
@@ -572,7 +649,9 @@
           "ja_jp": "ウィッチハンター ロビン"
         },
         "canonicalTitle": "Witch Hunter Robin",
-        "abbreviatedTitles": ["WHR"],
+        "abbreviatedTitles": [
+          "WHR"
+        ],
         "averageRating": "72.18",
         "ratingFrequencies": {
           "2": "12",
@@ -615,10 +694,22 @@
           "original": "https://media.kitsu.io/anime/poster_images/4/original.jpg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 110, "height": 156 },
-              "large": { "width": 550, "height": 780 },
-              "small": { "width": 284, "height": 402 },
-              "medium": { "width": 390, "height": 554 }
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
             }
           }
         },
@@ -629,9 +720,18 @@
           "original": "https://media.kitsu.io/anime/cover_images/4/original.jpg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 840, "height": 200 },
-              "large": { "width": 3360, "height": 800 },
-              "small": { "width": 1680, "height": 400 }
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
             }
           }
         },
@@ -744,7 +844,9 @@
     {
       "id": "5",
       "type": "anime",
-      "links": { "self": "https://kitsu.io/api/edge/anime/5" },
+      "links": {
+        "self": "https://kitsu.io/api/edge/anime/5"
+      },
       "attributes": {
         "createdAt": "2013-02-20T16:00:18.955Z",
         "updatedAt": "2022-03-28T06:00:04.149Z",
@@ -758,7 +860,10 @@
           "ja_jp": "冒険王ビィト"
         },
         "canonicalTitle": "Beet the Vandel Buster",
-        "abbreviatedTitles": ["Adventure King Beet", "Bouken Ou Beet"],
+        "abbreviatedTitles": [
+          "Adventure King Beet",
+          "Bouken Ou Beet"
+        ],
         "averageRating": "68.81",
         "ratingFrequencies": {
           "2": "3",
@@ -801,10 +906,22 @@
           "original": "https://media.kitsu.io/anime/poster_images/5/original.jpg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 110, "height": 156 },
-              "large": { "width": 550, "height": 780 },
-              "small": { "width": 284, "height": 402 },
-              "medium": { "width": 390, "height": 554 }
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
             }
           }
         },
@@ -918,7 +1035,9 @@
     {
       "id": "6",
       "type": "anime",
-      "links": { "self": "https://kitsu.io/api/edge/anime/6" },
+      "links": {
+        "self": "https://kitsu.io/api/edge/anime/6"
+      },
       "attributes": {
         "createdAt": "2013-02-20T16:00:20.071Z",
         "updatedAt": "2022-03-28T08:53:08.689Z",
@@ -926,9 +1045,14 @@
         "synopsis": "Sena is like any other shy kid starting high school; he's just trying to survive. Constantly bullied, he's accustomed to running away.\nSurviving high school is about to become a lot more difficult after Hiruma, captain of the school's American football team, witnesses Sena's incredible agility and speed during an escape from some bullies. Hiruma schemes to make Sena the running back of his school team, The Devil Bats, hoping that it will turn around the squad's fortunes from being the laughingstock of Japan's high school leagues, to title contender.\nTo protect his precious star player from rivaling recruiters, he enlists Sena as \"team secretary,\" giving him a visored helmet and the nickname \"Eyeshield 21\" to hide his identity.\nThe Devilbats will look to make their way to the Christmas Bowl, an annual tournament attended by the best football teams in Japan, with \"Eyeshield 21\" leading the way. Will they be able to win the Christmas Bowl? Will Sena be able to transform from a timid, undersized freshman to an all-star player? Put on your pads and helmet to find out!",
         "description": "Sena is like any other shy kid starting high school; he's just trying to survive. Constantly bullied, he's accustomed to running away.\nSurviving high school is about to become a lot more difficult after Hiruma, captain of the school's American football team, witnesses Sena's incredible agility and speed during an escape from some bullies. Hiruma schemes to make Sena the running back of his school team, The Devil Bats, hoping that it will turn around the squad's fortunes from being the laughingstock of Japan's high school leagues, to title contender.\nTo protect his precious star player from rivaling recruiters, he enlists Sena as \"team secretary,\" giving him a visored helmet and the nickname \"Eyeshield 21\" to hide his identity.\nThe Devilbats will look to make their way to the Christmas Bowl, an annual tournament attended by the best football teams in Japan, with \"Eyeshield 21\" leading the way. Will they be able to win the Christmas Bowl? Will Sena be able to transform from a timid, undersized freshman to an all-star player? Put on your pads and helmet to find out!",
         "coverImageTopOffset": 214,
-        "titles": { "en_jp": "Eyeshield 21", "ja_jp": "アイシールド21" },
+        "titles": {
+          "en_jp": "Eyeshield 21",
+          "ja_jp": "アイシールド21"
+        },
         "canonicalTitle": "Eyeshield 21",
-        "abbreviatedTitles": ["Eyeshield21"],
+        "abbreviatedTitles": [
+          "Eyeshield21"
+        ],
         "averageRating": "78.57",
         "ratingFrequencies": {
           "2": "53",
@@ -971,10 +1095,22 @@
           "original": "https://media.kitsu.io/anime/poster_images/6/original.jpg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 110, "height": 156 },
-              "large": { "width": 550, "height": 780 },
-              "small": { "width": 284, "height": 402 },
-              "medium": { "width": 390, "height": 554 }
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
             }
           }
         },
@@ -985,9 +1121,18 @@
           "original": "https://media.kitsu.io/anime/cover_images/6/original.jpg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 840, "height": 200 },
-              "large": { "width": 3360, "height": 800 },
-              "small": { "width": 1680, "height": 400 }
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
             }
           }
         },
@@ -1100,7 +1245,9 @@
     {
       "id": "7",
       "type": "anime",
-      "links": { "self": "https://kitsu.io/api/edge/anime/7" },
+      "links": {
+        "self": "https://kitsu.io/api/edge/anime/7"
+      },
       "attributes": {
         "createdAt": "2013-02-20T16:00:21.182Z",
         "updatedAt": "2022-03-28T08:53:28.061Z",
@@ -1114,7 +1261,10 @@
           "ja_jp": "ハチミツとクローバー"
         },
         "canonicalTitle": "Honey and Clover",
-        "abbreviatedTitles": ["HachiKuro", "Honey & Clover"],
+        "abbreviatedTitles": [
+          "HachiKuro",
+          "Honey & Clover"
+        ],
         "averageRating": "79.85",
         "ratingFrequencies": {
           "2": "80",
@@ -1157,10 +1307,22 @@
           "original": "https://media.kitsu.io/anime/poster_images/7/original.jpg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 110, "height": 156 },
-              "large": { "width": 550, "height": 780 },
-              "small": { "width": 284, "height": 402 },
-              "medium": { "width": 390, "height": 554 }
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
             }
           }
         },
@@ -1171,9 +1333,18 @@
           "original": "https://media.kitsu.io/anime/cover_images/7/original.jpg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 840, "height": 200 },
-              "large": { "width": 3360, "height": 800 },
-              "small": { "width": 1680, "height": 400 }
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
             }
           }
         },
@@ -1286,7 +1457,9 @@
     {
       "id": "8",
       "type": "anime",
-      "links": { "self": "https://kitsu.io/api/edge/anime/8" },
+      "links": {
+        "self": "https://kitsu.io/api/edge/anime/8"
+      },
       "attributes": {
         "createdAt": "2013-02-20T16:00:22.113Z",
         "updatedAt": "2022-03-28T06:00:04.149Z",
@@ -1342,10 +1515,22 @@
           "original": "https://media.kitsu.io/anime/poster_images/8/original.jpg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 110, "height": 156 },
-              "large": { "width": 550, "height": 780 },
-              "small": { "width": 284, "height": 402 },
-              "medium": { "width": 390, "height": 554 }
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
             }
           }
         },
@@ -1459,7 +1644,9 @@
     {
       "id": "9",
       "type": "anime",
-      "links": { "self": "https://kitsu.io/api/edge/anime/9" },
+      "links": {
+        "self": "https://kitsu.io/api/edge/anime/9"
+      },
       "attributes": {
         "createdAt": "2013-02-20T16:00:22.975Z",
         "updatedAt": "2022-03-28T06:00:04.149Z",
@@ -1472,7 +1659,9 @@
           "ja_jp": "頭文字〈イニシャル〉D FOURTH STAGE"
         },
         "canonicalTitle": "Initial D Fourth Stage",
-        "abbreviatedTitles": ["Initial D 4th Stage"],
+        "abbreviatedTitles": [
+          "Initial D 4th Stage"
+        ],
         "averageRating": "79.91",
         "ratingFrequencies": {
           "2": "126",
@@ -1515,10 +1704,22 @@
           "original": "https://media.kitsu.io/anime/poster_images/9/original.jpeg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 110, "height": 156 },
-              "large": { "width": 550, "height": 780 },
-              "small": { "width": 284, "height": 402 },
-              "medium": { "width": 390, "height": 554 }
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
             }
           }
         },
@@ -1529,9 +1730,18 @@
           "original": "https://media.kitsu.io/anime/cover_images/9/original.jpg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 840, "height": 200 },
-              "large": { "width": 3360, "height": 800 },
-              "small": { "width": 1680, "height": 400 }
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
             }
           }
         },
@@ -1644,7 +1854,9 @@
     {
       "id": "10",
       "type": "anime",
-      "links": { "self": "https://kitsu.io/api/edge/anime/10" },
+      "links": {
+        "self": "https://kitsu.io/api/edge/anime/10"
+      },
       "attributes": {
         "createdAt": "2013-02-20T16:00:23.893Z",
         "updatedAt": "2022-03-28T06:00:04.149Z",
@@ -1701,10 +1913,22 @@
           "original": "https://media.kitsu.io/anime/poster_images/10/original.jpg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 110, "height": 156 },
-              "large": { "width": 550, "height": 780 },
-              "small": { "width": 284, "height": 402 },
-              "medium": { "width": 390, "height": 554 }
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
             }
           }
         },
@@ -1715,9 +1939,18 @@
           "original": "https://media.kitsu.io/anime/cover_images/10/original.jpg",
           "meta": {
             "dimensions": {
-              "tiny": { "width": 840, "height": 200 },
-              "large": { "width": 3360, "height": 800 },
-              "small": { "width": 1680, "height": 400 }
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
             }
           }
         },
@@ -1826,12 +2059,79 @@
           }
         }
       }
+    },
+    {
+      "id": "11",
+      "attributes": {
+        "titles": {
+          "en_jp": "One piece"
+        },
+        "synopsis": "Monkey D. Luffy rêve de retrouver ce trésor légendaire et de devenir le nouveau \"Roi des Pirates\". Après avoir mangé un fruit du démon, il possède un pouvoir lui permettant de réaliser son rêve. Il lui faut maintenant trouver un équipage pour partir à l'aventure !",
+        "startDate": "1997-07-22",
+        "episodeCount": 1014,
+        "status": "In progress...",
+        "posterImage": {
+          "original": "C:\\fakepath\\onepiece.jpg"
+        }
+      }
     }
   ],
-  "meta": { "count": 17696 },
+  "meta": {
+    "count": 17696
+  },
   "links": {
     "first": "https://kitsu.io/api/edge/anime?page%5Blimit%5D=10&page%5Boffset%5D=0",
     "next": "https://kitsu.io/api/edge/anime?page%5Blimit%5D=10&page%5Boffset%5D=10",
     "last": "https://kitsu.io/api/edge/anime?page%5Blimit%5D=10&page%5Boffset%5D=17686"
-  }
+  },
+  "users": [
+    {
+      "id": 1,
+      "name": "Demey",
+      "firstname": "Alexandre",
+      "email": "opscommando@gmail.com",
+      "birthdate": "1997-08-29",
+      "password": "1234="
+    },
+    {
+      "id": 2,
+      "name": "Massaux",
+      "firstname": "Nicolas",
+      "email": "massaux.nicolas@skynet.be",
+      "birthdate": "2222-02-12",
+      "password": "1234"
+    },
+    {
+      "id": 3,
+      "name": "Knuts",
+      "firstname": "Jordan",
+      "email": "jordan.knuts@hotmail.com",
+      "birthdate": "2222-02-12",
+      "password": "1234567"
+    },
+    {
+      "id": 4,
+      "name": "Demey",
+      "firstname": "Emeline",
+      "email": "emeline.demey@skynet.be",
+      "birthdate": "2002-02-22",
+      "password": "1234="
+    },
+    {
+      "id": 5,
+      "name": "Brugmanz",
+      "firstname": "Laurent",
+      "email": "b.laurent@skynet.be",
+      "birthdate": "2202-02-22",
+      "password": "12345="
+    },
+    {
+      "id": 6,
+      "name": "Vidick",
+      "firstname": "Lea",
+      "email": "lea.v@gmail.com",
+      "birthdate": "2202-02-22",
+      "password": "12345="
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 export interface IAnimeDescriptionBase {
     id: number;
-    description: string;
+    synopsis: string;
     en_jp: string;
     ja_jp: string;
     averageRating: string;

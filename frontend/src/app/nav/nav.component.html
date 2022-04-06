@@ -1,27 +1,18 @@
 <div class="navigation--container">
     <div>
         <a routerLink="">
-            <h3>
-                Poutchi Anime
-            </h3>
+            <img src="../assets/image/PoutchiAnime.png" alt="PoutchiAnime" width="150">
         </a>
     </div>
 
-    <ul>
-        <li *ngFor="let menuItem of menu">
-            <a [routerLink]="menuItem.url" [queryParams]="menuItem.queryParams">{{menuItem.title}}</a>
-            <ul *ngIf="menuItem.children && menuItem.children.length > 0">
-                <ng-container *ngFor="let subMenuItem of menuItem.children">
-                    <li>
-                        <a [routerLink]="((menuItem.url)?menuItem.url:'')+subMenuItem.url"
-                            [queryParams]="subMenuItem.queryParams">{{subMenuItem.title}}</a>
-                    </li>
-                </ng-container>
-            </ul>
+    <ul class="features--container">
+        <li *ngIf="isLogged">
+            <a routerLink="/new">Add new anime</a>
         </li>
     </ul>
 
-    <ul class="connexion--container">
+
+    <ul class="connexion--container" *ngIf="!isLogged">
         <a routerLink="/register">
             <button class="button">
                 <li>Register</li>
@@ -33,4 +24,9 @@
             </button>
         </a>
     </ul>
+
+    <button class="button" *ngIf="isLogged" (click)="signOut()">
+        Sign out
+    </button>
+
 </div>

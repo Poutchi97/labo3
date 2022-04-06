@@ -37,7 +37,7 @@ export class AnimeDescriptionService {
   private _getOneResultDescription(data: IAnimeDescription): IAnimeDescriptionBase {
     let result: IAnimeDescriptionBase = {
       id: data.id,
-      description: data.attributes.description,
+      synopsis: data.attributes.synopsis,
       en_jp: data.attributes.titles.en_jp,
       ja_jp: data.attributes.titles.ja_jp,
       averageRating: data.attributes.averageRating,

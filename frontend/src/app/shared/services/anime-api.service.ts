@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
+import { IAnimeCreating } from 'src/app/models/ianime-creating';
 import { IAnimeDatas } from 'src/app/models/ianime-datas';
 import { IGetOneResult } from 'src/app/models/iget-one-result';
 
@@ -27,7 +28,8 @@ export class AnimeApiService {
       startDate: data.attributes.startDate,
       endDate: data.attributes.endDate ?? "",
       userCount: data.attributes.userCount,
-      status: data.attributes.status
+      status: data.attributes.status,
+      episodeCount: data.attributes.episodeCount
 
     };
     return result
@@ -44,26 +46,27 @@ export class AnimeApiService {
 
 
   public _getAllResultToAnimeListArray(data: IGetOneResult[]): IAnimeDatas[] {
-    let result: IAnimeDatas[] = []
-    console.log("data", data)
+    let result: IAnimeDatas[] = [];
     data.forEach(element => result.push({
       id: element.id,
       synopsis: element.attributes.synopsis,
       en_jp: element.attributes.titles.en_jp,
-      ja_jp: element.attributes.titles.ja_jp,
+      ja_jp: element.attributes.titles.ja_jp ?? "",
       originalImage: element.attributes.posterImage.original ?? "",
       startDate: element.attributes.startDate,
       endDate: element.attributes.endDate ?? "",
       averageRating: element.attributes.averageRating,
       userCount: element.attributes.userCount,
-      status: element.attributes.status
+      status: element.attributes.status,
+      episodeCount: element.attributes.episodeCount
     }));
     return result;
   }
 
-  public post(newAnime: IAnimeDatas): Observable<IAnimeDatas> {
-    return this._http.post<IAnimeDatas>(this._url, newAnime);
+  public post(newAnime: IGetOneResult): Observable<IGetOneResult> {
+    return this._http.post<IGetOneResult>(this._url, newAnime);
   }
+
 
   public delete(id: number) {
     return this._http.delete(this._url + id);
