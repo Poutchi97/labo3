@@ -7,5 +7,6 @@ const auth = require('../middleware/auth')
 router.post('/', multer, animeController.createAnime);
 router.get('/', animeController.getAllAnimes);
 router.get('/:id', animeController.getOneAnime);
+router.put('/:id', multer, animeController.modifyOneAnime);
 
 module.exports = router;

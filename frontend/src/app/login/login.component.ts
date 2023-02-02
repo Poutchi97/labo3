@@ -25,17 +25,22 @@ export class LoginComponent implements OnInit {
     this.loginForm = this._fb.group({
       email: [null, [Validators.required]],
       password: [null, [Validators.required]],
-    })
+    });
   }
 
   public onSubmit() {
-    this._users.getAll().subscribe({
-      next: datas => datas.forEach(user => {
-        if (user.email === this.loginForm.value.email && user.password === this.loginForm.value.password) {
-          this._router.navigateByUrl("/");
-          this._localStorage.addUser(user);//, this.loginForm.value.email
-        }
-      })
+    this._users.login({
+      email: this.loginForm.value.email,
+      status: '',
+      password: this.loginForm.value.password
     })
+      .subscribe(
+        (res) => {
+          this._localStorage.addUser({ 'token': res.token, 'id': res.userId })
+
+          this._router.navigateByUrl('/');
+        }
+
+      );
   }
 }

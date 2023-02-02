@@ -4,74 +4,37 @@ import { map, Observable } from 'rxjs';
 import { IAnimeCreating } from 'src/app/models/ianime-creating';
 import { IAnimeDatas } from 'src/app/models/ianime-datas';
 import { IGetOneResult } from 'src/app/models/iget-one-result';
+import { IImage } from 'src/app/models/iimage';
+import { IUserCommentaryAnime } from 'src/app/models/iuser-commentary-anime';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AnimeApiService {
-
-  private _url: any = "http://localhost:3000/data/";
+  // private _url: any = "http://localhost:3000/data/";
+  // private _url: any = "http://localhost:3000/api/anime/";
+  private _url: any = "https://kitsu.io/api/edge/anime/";
+  public imagepPath: string = "../../assets/images/"
   constructor(private _http: HttpClient) { }
 
-  public get(id: number): Observable<IAnimeDatas> {
-    return this._http.get<IGetOneResult>(this._url + id)
-      .pipe(map(this._getOneResultToAnimeBase))
+  public get(id: number): Observable<IAnimeDatas[]> {
+    return this._http.get<IAnimeDatas[]>(this._url + id)
   }
 
-  private _getOneResultToAnimeBase(data: IGetOneResult): IAnimeDatas {
-    let result: IAnimeDatas = {
-      id: data.id,
-      synopsis: data.attributes.synopsis,
-      en_jp: data.attributes.titles.en_jp,
-      ja_jp: data.attributes.titles.ja_jp,
-      originalImage: data.attributes.posterImage.original ?? "",
-      startDate: data.attributes.startDate,
-      endDate: data.attributes.endDate ?? "",
-      userCount: data.attributes.userCount,
-      status: data.attributes.status,
-      episodeCount: data.attributes.episodeCount
-
-    };
-    return result
+  public getAll(): Observable<any> {
+    return this._http.get<any>(this._url);
   }
 
-
-  public getAll(): Observable<IAnimeDatas[]> {
-    let params: HttpParams = new HttpParams()
-      .set('[offset]', 0)
-      .set('[limit]', 6)
-    return this._http.get<IGetOneResult[]>(this._url, { params: params })
-      .pipe(map(this._getAllResultToAnimeListArray))  // 
+  public post(newAnime: FormData): Observable<IAnimeDatas> {
+    return this._http.post<IAnimeDatas>(this._url, newAnime);
   }
-
-
-  public _getAllResultToAnimeListArray(data: IGetOneResult[]): IAnimeDatas[] {
-    let result: IAnimeDatas[] = [];
-    data.forEach(element => result.push({
-      id: element.id,
-      synopsis: element.attributes.synopsis,
-      en_jp: element.attributes.titles.en_jp,
-      ja_jp: element.attributes.titles.ja_jp ?? "",
-      originalImage: element.attributes.posterImage.original ?? "",
-      startDate: element.attributes.startDate,
-      endDate: element.attributes.endDate ?? "",
-      averageRating: element.attributes.averageRating,
-      userCount: element.attributes.userCount,
-      status: element.attributes.status,
-      episodeCount: element.attributes.episodeCount
-    }));
-    return result;
-  }
-
-  public post(newAnime: IGetOneResult): Observable<IGetOneResult> {
-    return this._http.post<IGetOneResult>(this._url, newAnime);
-  }
-
-
   public delete(id: number) {
     return this._http.delete(this._url + id);
   }
 
+  public update(id: number, newForm: FormData) {
+    return this._http.put(this._url + id, newForm)
+  }
 
 }
 

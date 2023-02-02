@@ -1,8 +1,18 @@
 export interface IUser {
-    id: number;
-    name?: string;
-    firstname?: string;
+
     email: string;
-    birthdate: string;
+    status: string;
+    pseudo: string;
     password: string;
+}
+
+export interface IUserLogin {
+    email: string;
+    status: string;
+    password: string;
+}
+
+export interface IUserWithToken {
+    userId: string;
+    token: string;
 }

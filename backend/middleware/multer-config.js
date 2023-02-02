@@ -11,11 +11,13 @@ const storage = multer.diskStorage({
         callback(null, 'images')
     },
     filename: (req, file, callback) => {
-        const name = file.originalname.split(' ').join('_');
-        // const ext = MIME_TYPES[file.mimetype];
-
+        const name = file.originalname.split(' ').join('_');       // const ext = MIME_TYPES[file.mimetype];
         callback(null, Date.now() + file.originalname);
     }
 });
 
-module.exports = multer({ storage: storage, limits: { fieldSize: 10 * 1024 * 1024 } }).single('filename');
+module.exports = multer({ storage: storage, limits: { fieldSize: 10 * 1024 * 1024 } }).fields([{
+    name: 'animecover'
+}, {
+    name: 'animeposter'
+}]);

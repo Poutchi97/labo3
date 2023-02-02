@@ -16,9 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { AnimeDescriptionComponent } from './anime-description/anime-description.component';
 import { NewAnimeComponent } from './new-anime/new-anime.component';
-
-
-
+import { ModifyComponent } from './modify/modify.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +27,7 @@ import { NewAnimeComponent } from './new-anime/new-anime.component';
     LoginComponent,
     AnimeDescriptionComponent,
     NewAnimeComponent,
+    ModifyComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +39,7 @@ import { NewAnimeComponent } from './new-anime/new-anime.component';
     MatCardModule,
     MatGridListModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
 
   ],
   exports: [SharedModule, HttpClientModule, FormsModule, ReactiveFormsModule],

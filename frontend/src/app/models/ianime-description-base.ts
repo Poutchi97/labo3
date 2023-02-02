@@ -15,4 +15,5 @@ export interface IAnimeDescriptionBase {
     small: string;
     medium: string;
     original: string;
+    commentary?: string;
 }

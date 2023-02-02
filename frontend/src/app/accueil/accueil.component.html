@@ -1,8 +1,4 @@
-<div class="bigtitle">
-    <img src="../assets/image/PoutchiAnime.png" alt="PoutchiAnime" width="500px">
-
-</div>
-<div class="search--container">
+<!-- <div class="search--container">
 
 
     <div class="sortedlist">
@@ -17,34 +13,40 @@
         </select>
     </div>
 
+
     <div>
         <form>
             <input type="text" name="" id="">
             <input type="submit" value="Search">
         </form>
     </div>
-</div>
-<div class="card--container">
-    <div class="card" *ngFor="let ani of animesCopy; let i = index">
-        <div class="card--header" (click)="displayDetails(i)">
-            <img [src]="ani.originalImage" [alt]="ani.en_jp">
-            <h2>{{ani.ja_jp}}</h2>
-            <h4>{{ani.en_jp}}</h4>
-        </div>
+</div> -->
+<!-- This is for testing One and only one anime -->
+<!-- <div>
+    <h2>{{anime.en_jp}}</h2>
+    <img src="{{path}}{{anime.image_file}}" alt="pa">
+</div> -->
 
+<div>
 
-        <!-- <div class="card--content">
-            <h4>Starting date : {{ani.startDate}}</h4>
-            <p class="synopsis">
-                {{ani.synopsis}}
-            </p>
-
-            <div class="button--container">
-                <button class="button" [id]="i + 1" (click)="displayDetails(i)">Show details</button>
-            </div>
-            <h5 *ngIf="ani.averageRating">
-                rating : {{ani.averageRating}}
-            </h5>
-        </div> -->
+    <div class="text-center">
+        <img src="../assets/images/PoutchiAnime.png" alt="PoutchiAnime" width="530">
     </div>
+
+    <div class="card--container">
+        <div class="card" *ngFor="let ani of animes; let i = index">
+            <div class="card--header" (click)="displayDetails(i)">
+                <img src={{ani.attributes.posterImage.original}} [alt]="ani.attributes.titles.en" width="150"
+                    class="poster">
+
+                <h2>{{ani.attributes.titles.en}}</h2>
+                <h4 *ngIf="ani.attributes.titles.ja_jp">{{ani.attributes.titles.ja_jp}}</h4>
+            </div>
+
+            <!-- <img src="../../assets/luffy.png" alt="luffy" class="luffy"> -->
+
+
+        </div>
+    </div>
+
 </div>

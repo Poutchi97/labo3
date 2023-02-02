@@ -2,29 +2,31 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { IAnimeDatas } from 'src/app/models/ianime-datas';
 import { IUser } from 'src/app/models/iuser';
+import { JwtHelperService } from "@auth0/angular-jwt";
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocalStorageService {
   public user!: string;
-  public key: string = "1";
+  public key: string = 'auth';
   public ConnexionBehavior: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(this.userLogged());
+  private jwtHelper = new JwtHelperService();
   constructor() { }
 
-  public addUser(user: IUser) {
-    localStorage.setItem(this.key, JSON.stringify(user));
+  public addUser(token: any) {
+    localStorage.setItem(this.key, JSON.stringify(token));
     this.ConnexionBehavior.next(this.userLogged());
   }
 
-  public deleteUser(key: string) {
-    localStorage.removeItem(key);
+  public deleteUser() {
+    localStorage.removeItem(this.key);
     this.ConnexionBehavior.next(this.userLogged());
   }
 
-  public getUser(key: string) {
-    let user: string | null = localStorage.getItem(key);
-    if (user === null) throw new Error("No user saved");
+  public getUser() {
+    let user: string | null = localStorage.getItem(this.key);
+    if (user === null) throw new Error("No user logged");
     return JSON.parse(user);
   }
 
@@ -32,11 +34,12 @@ export class LocalStorageService {
     return localStorage.length;
   }
 
-  public userLogged() {
-    let user: string | null = localStorage.getItem(this.key);
-    if (user === null) {
+  public userLogged(): boolean {
+    let token = localStorage.getItem(this.key);
+    if (token === null) {
       return false;
     }
     return true;
+    // return !this.jwtHelper.isTokenExpired(token) || !token;
   }
 }

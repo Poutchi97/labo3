@@ -1,37 +1,32 @@
 <div *ngIf="animeDesc" class="description--body">
-    <h1>{{animeDesc.ja_jp}} </h1>
+    <h1>{{animeDesc.attributes.titles.en_jp}} </h1>
     <button routerLink="/">Retour</button>
 
     <div class="description--container">
+        <div>
+            <img src="{{imagePath}}" width="300" alt="">
+        </div>
         <div class="infos">
             <div class="title">
-                <h2 *ngIf="animeDesc.ja_jp">{{animeDesc.ja_jp}}</h2>
-                <h4 *ngIf="animeDesc.en_jp">({{animeDesc.en_jp}})</h4>
+                <h2 *ngIf="animeDesc.attibutes.titles.ja_jp">{{animeDesc.attibutes.titles.ja_jp}}</h2>
+                <h4 *ngIf="animeDesc.attibutes.titles.en_jp">({{animeDesc.attributes.titles.en_jp}})</h4>
             </div>
 
             <div class="space--evenly">
-                <p> Episode count : <span>{{animeDesc.episodeCount}} episodes</span></p>
                 <div class="status">
-                    <p>Starting date : {{animeDesc.startDate}}</p>
-                    <p>Ending date : {{animeDesc.endDate}}</p>
-                    <p>Status : {{animeDesc.status}}</p>
+                    <p>Starting date : {{animeDesc.attributes.creation_date}}</p>
+                    <p *ngIf="animeDesc.attibutes.status">Ending date : {{animeDesc.attibutes.status}}</p>
                 </div>
                 <div class="description">
                     <h4>
                         Description:
                     </h4>
-                    <p class="description">{{animeDesc.synopsis}}</p>
+                    <p class="description">{{animeDesc.attibutes.synopsis}}</p>
                 </div>
                 <div class="rating">
-                    <p *ngIf="animeDesc.averageRating">Average rating : {{animeDesc.averageRating}}</p>
-                    <p *ngIf="animeDesc.ratingRank">Rating rank : {{animeDesc.ratingRank}}</p>
                 </div>
             </div>
         </div>
-
-
-        <div class="image">
-            <img [src]="animeDesc.original" alt={{animeDesc.original}} width=470 height="700">
-        </div>
     </div>
+
 </div>

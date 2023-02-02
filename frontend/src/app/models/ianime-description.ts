@@ -14,6 +14,7 @@ interface IAttribute {
     status: string;
     posterImage: IPosterImages;
     episodeCount: number;
+    commentary?: string;
 }
 
 interface ITitles {

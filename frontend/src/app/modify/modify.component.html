@@ -1,7 +1,7 @@
 <h1>Add new anime to the collection</h1>
 <div class="newanime--container">
     <div class="form--container">
-        <form [formGroup]="creationForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="modifyForm" *ngIf="modifyForm" (ngSubmit)="onSubmit()">
             <h2>アニメを追加</h2>
             <div>
                 <label for="title_eng">Title in eng : </label>
@@ -34,12 +34,7 @@
             </div>
             <div>
                 <label for="image_file">Cover image : </label>
-                <input type="file" formControlName="imageFile" name="imageFile" (change)="uploadCover($event)">
-
-            </div>
-            <div>
-                <label for="image_file">Poster image : </label>
-                <input type="file" formControlName="posterFile" name="posterFile" (change)="uploadPoster($event)">
+                <input type="file" formControlName="imageFile" name="imageFile" (change)="upload($event)">
 
             </div>
 

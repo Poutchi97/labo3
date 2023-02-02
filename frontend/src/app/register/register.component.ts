@@ -23,44 +23,24 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = this._fb.group({
-      name: [null, [Validators.required]],
-      firstname: [null, [Validators.required]],
+      pseudo: [null, [Validators.required]],
       email: [null, [Validators.required]],
-      birthdate: [null, [Validators.required]],
       password: [null, [Validators.required]],
-    })
-
-    this._register.getAll().subscribe({
-      next: (datas) => {
-        // console.log("getall", datas);
-        this.usersLength = datas.length;
-
-      }
-    })
-
-    this._register.get(1).subscribe({
-      next: (data) => {
-        // console.log("getone", data);
-      }
     })
 
   }
 
   public onSubmit() {
     let newUser: IUser = {
-      id: this.usersLength += 1,
-      name: this.registerForm.value.name.trim(),
-      firstname: this.registerForm.value.firstname.trim(),
+      pseudo: this.registerForm.value.pseudo,
       email: this.registerForm.value.email,
-      birthdate: this.registerForm.value.birthdate,
-      password: this.registerForm.value.password
+      password: this.registerForm.value.password,
+      status: ''
     }
 
     this._register.post(newUser).subscribe({
       next: data => console.log(data)
     });
-
-    this._localStorage.addUser(newUser) //, this.registerForm.value.email
   }
 
 }

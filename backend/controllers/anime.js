@@ -9,6 +9,7 @@ exports.createAnime = (req, res, next) => {
         ja_jp: req.body.ja_jp,
         creation_date: new Date(req.body.creation_date),
         imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`,
+        posterUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`,
         status: req.body.status,
         synopsis: req.body.synopsis,
         episode_count: parseInt(req.body.episode_count),
@@ -28,4 +29,16 @@ exports.getOneAnime = (req, res, next) => {
     Anime.find({ _id: req.params.id })
         .then(anime => res.status(200).json(anime))
         .catch(error => res.status(404).json({ error }));
+}
+
+exports.modifyOneAnime = (req, res, next) => {
+
+    const animeObject = req.file ?
+        {
+            ...req.body, imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
+        } : { ...req.body }
+
+    Anime.updateOne({ _id: req.params.id }, { ...animeObject, _id: req.params.id })
+        .then(() => res.status(200).json({ message: 'Objet modifié' }))
+        .catch(error => res.status(400).json({ error }))
 }

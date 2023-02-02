@@ -5,6 +5,7 @@ const animeSchema = mongoose.Schema({
     ja_jp: { type: String, required: false },
     creation_date: { type: Date, required: true },
     imageUrl: { type: String, required: true },
+    posterUrl: { type: String, required: true },
     status: { type: String, required: true },
     synopsis: { type: String, required: true },
     episode_count: { type: Number, required: true },

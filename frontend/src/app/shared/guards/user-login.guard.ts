@@ -16,7 +16,7 @@ export class UserLoginGuard implements CanActivate {
 
     let userGuard: IUser
     try {
-      userGuard = this._localStorage.getUser("1")
+      userGuard = this._localStorage.getUser()
     } catch (error) {
       return true
     }

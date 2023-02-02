@@ -1,14 +1,24 @@
+import { IImage } from "./iimage";
+
 export interface IAnimeDatas {
-    id: string;
-    startDate: string;
-    endDate?: string;
-    synopsis: string;
-    en_jp: string;
-    ja_jp?: string;
-    averageRating?: string;
-    originalImage: string;
-    userCount?: number;
-    status: string;
-    episodeCount: number;
+    data: IData;
 }
 
+export interface IData {
+    id: string;
+    attributes: IAttributes;
+}
+
+export interface IAttributes {
+    titles: ITitles;
+    posterImage: IPosterImage;
+}
+
+export interface IPosterImage {
+    tiny: string;
+    large: string;
+}
+export interface ITitles {
+    en: string;
+    ja_jp: string;
+}

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IAnimeDescriptionBase } from '../models/ianime-description-base';
-import { AnimeDescriptionService } from '../shared/services/anime-description.service';
+import { IAnimeDatas } from '../models/ianime-datas';
+import { AnimeApiService } from '../shared/services/anime-api.service';
 
 @Component({
   selector: 'app-anime-description',
@@ -9,26 +10,39 @@ import { AnimeDescriptionService } from '../shared/services/anime-description.se
   styleUrls: ['./anime-description.component.scss']
 })
 export class AnimeDescriptionComponent implements OnInit {
-  public animeDesc!: IAnimeDescriptionBase
+
+  public animeDesc!: any;
+  public imagePath: string = "../../assets/images/"
+
   constructor(
-    private _animeDesc: AnimeDescriptionService,
+    private _api: AnimeApiService,
     private _ar: ActivatedRoute,
     private _router: Router
   ) { }
 
   ngOnInit(): void {
     try {
-      this._animeDesc.getDescription(this._ar.snapshot.params['id'])
+      this._api.get(this._ar.snapshot.params['id'])
         .subscribe({
           next: (data) => {
+            console.log('data', data)
             this.animeDesc = data;
+
+            // this.imagePath = data[0].imageUrl
+            console.log(this.animeDesc);
+
           }
-        });
+        })
 
     } catch (error) {
-      console.warn(error);
-      this._router.navigateByUrl("/")
+      console.log(error);
+      this._router.navigateByUrl('/');
+
     }
+
   }
 
+  public onSubmit() {
+
+  }
 }
